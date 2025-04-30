@@ -19,13 +19,13 @@ import json
 logger = logging.getLogger(__name__)
 
 # Load machine learning models and dictionaries
-minmaxscaler = joblib.load(r'C:\Users\rajmo\Desktop\Project\myproject\recommend\ml_models\minmaxscaler.pkl')  
-crop_model = joblib.load(r'C:\Users\rajmo\Desktop\Project\myproject\recommend\ml_models\model.pkl')   
-fertmodel= joblib.load(r'C:\Users\rajmo\Desktop\Project\myproject\recommend\ml_models\fertrec.pkl')
-fertname_dict=joblib.load(r'C:\Users\rajmo\Desktop\Project\myproject\recommend\ml_models\fertname_dict.pkl')
+minmaxscaler = joblib.load(r'C:\Users\ACER\Desktop\farmee\recommend\ml_models\minmaxscaler.pkl')  
+crop_model = joblib.load(r'C:\Users\ACER\Desktop\farmee\recommend\ml_models\model.pkl')   
+fertmodel= joblib.load(r'C:\Users\ACER\Desktop\farmee\recommend\ml_models\fertrec.pkl')
+fertname_dict=joblib.load(r'C:\Users\ACER\Desktop\farmee\recommend\ml_models\fertname_dict.pkl')
 
-disease_model_path = os.path.join(settings.BASE_DIR, 'models', r"C:\Users\rajmo\Desktop\Project\myproject\recommend\ml_models\diseasedetect.keras")
-disease_dict_path = os.path.join(settings.BASE_DIR, 'models', r"C:\Users\rajmo\Desktop\Project\myproject\recommend\ml_models\class_names (1).json")
+disease_model_path = os.path.join(settings.BASE_DIR, 'models', r"C:\Users\ACER\Desktop\farmee\recommend\ml_models\diseasedetect.keras")
+disease_dict_path = os.path.join(settings.BASE_DIR, 'models', r"C:\Users\ACER\Desktop\farmee\recommend\ml_models\class_names (1).json")
 disease_model = tf.keras.models.load_model(disease_model_path)
 
 with open(disease_dict_path, 'r') as f:
